@@ -4,7 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jitesh Vador - Digital Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .contact-form {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 10px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background: #333;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <header id="home">
@@ -18,118 +71,31 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#participations">Participations</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="header-content">
-      <!-- Make sure PHOTO3.jpg is in the same folder as this HTML file -->
-      <img src="PHOTO3.jpg" alt="Profile Photo" id="profile-photo" />
-      <h1>Jitesh Vador</h1>
-      <p>Python Backend Developer | ICT Undergraduate</p>
-      <div class="contact-info">
-        <p>Phone: 8866240242</p>
-        <p>Email: <a href="mailto:vadorjitesh@gmail.com">vadorjitesh@gmail.com</a></p>
-        <p>
-          <a href="https://www.linkedin.com/in/jitesh-vador-2175162b0/">LinkedIn</a> | <a href="https://github.com/Jitesh-vador">GitHub</a>
-        </p>
-      </div>
-    </div>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Python backend developer with a focus on app development using modern frameworks and AI-driven solutions.
-        Skilled in Internet of Things (IoT), with a strong foundation in Database Management Systems (DBMS) and
-        backend development. Currently a 3rd-year ICT undergraduate passionate about building impactful technology
-        solutions.
-      </p>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <div class="education-item">
-        <h3>B.Tech in Information & Communication Technology</h3>
-        <p>Pandit Deendayal Energy University</p>
-        <p>C.G.P.A: 8.85 | 2022 – Present</p>
-        <p>Relevant Coursework: MATLAB, Ansys, Proteus, Arduino IDE, Theory of Computation</p>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> Python, Java, C, C++</li>
-        <li><strong>Backend:</strong> Flask, Django</li>
-        <li><strong>Web:</strong> HTML5, CSS3, JavaScript</li>
-        <li><strong>Version Control:</strong> Git, GitHub, GitLab, S3</li>
-        <li><strong>Hardware:</strong> Internet of Things</li>
-        <li><strong>Soft Skills:</strong> Project Management</li>
-        <li><strong>Database:</strong> MySQL</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-item">
-        <h3>NY Hotels - Hotel Management Software</h3>
-        <p>
-          Built a Hotel Management Software using Python Tkinter and MySQL for seamless management of different
-          aspects of a hotel. Integrated MySQL with Python, enabling real-time data storage and retrieval.
-        </p>
-      </div>
-      <div class="project-item">
-        <h3>DigitGlow</h3>
-        <p>
-          Python integrated with Arduino UNO to remotely control LED. Built an Arduino circuit integrated with Python
-          CV2 and Firmata to remotely operate LEDs using gestures.
-        </p>
-      </div>
-      <div class="project-item">
-        <h3>QueryGenie – SQL Query Generator</h3>
-        <p>A SQL Query Generator using Django Backend and JavaScript.</p>
-      </div>
-    </section>
-
-    <section id="experience">
-      <h2>Past Experience</h2>
-      <div class="experience-item">
-        <h3>Electronic Arts (EA) Software Engineering Virtual Experience Program</h3>
-        <p>Feb 2025</p>
-        <ul>
-          <li>
-            Patched a bugfix and optimized the EA Sports College Football codebase by implementing an improved data
-            structure.
-          </li>
-          <li>
-            Proposed a new feature for EA Sports College Football and wrote a Feature Proposal.
-          </li>
-          <li>Built a class diagram and created a header file in C++.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Project Management from LinkedIn Learning</li>
-        <li>Software Engineering Job Simulation at EA</li>
-      </ul>
-    </section>
-
-    <section id="participations">
-      <h2>Participations</h2>
-      <ul>
-        <li>7-day IoT Workshop</li>
-        <li>2-day MERN Stack Workshop</li>
-        <li>2-day AWS Workshop</li>
-      </ul>
+    <section id="contact" class="contact-form">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Jitesh Vador. All Rights Reserved.</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
